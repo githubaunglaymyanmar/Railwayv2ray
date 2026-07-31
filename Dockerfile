@@ -18,14 +18,14 @@ RUN rm -rf /etc/ssh/sshd_config && cd /etc/ssh && \
 
 # ၃။ vpn script ကို ဒေါင်းလုဒ်ဆွဲပြီး /usr/local/bin/vpn ထဲမှာ သိမ်းဆည်းခြင်း
 RUN wget -O /usr/local/bin/vpn https://github.com/gdhvdvb95-source/v2ray/raw/refs/heads/main/v2ray && \
-    chmod +x /usr/local/bin/v2ray
+    chmod +x /usr/local/bin/vpn
 
 # Port များ ဖွင့်ပေးခြင်း
 EXPOSE 22
 EXPOSE 6080
 
 # ၄။ Container စတာနဲ့ vpn script ကို တိုက်ရိုက် run ခိုင်းခြင်း
-CMD ["/bin/bash", "-c", "/usr/local/bin/v2ray && sleep infinity"]
+CMD ["/bin/bash", "-c", "/usr/local/bin/vpn && sleep infinity"]
 
 
 
