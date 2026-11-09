@@ -8,6 +8,8 @@ sudo dpkg -i cloudflared.deb
 sudo cloudflared service install eyJhIjoiMzcwZTRmM2E4MzVmZWU3Yzk1MzBiYWJlNWYxMzBjZTgiLCJ0IjoiNDU0MzY3YjYtY2E1ZC00OTc3LTk3MDktODNjMGRjYmJlMTRiIiwicyI6Ik9XUXhNemt4WmpBdFpEUTFOaTAwT1dabExXSTNaamN0WmpsaFpqUmhOekUwWlRsbCJ9
 
 screen -m -d -S cloudflared cloudflared tunnel run --token eyJhIjoiMzcwZTRmM2E4MzVmZWU3Yzk1MzBiYWJlNWYxMzBjZTgiLCJ0IjoiNDU0MzY3YjYtY2E1ZC00OTc3LTk3MDktODNjMGRjYmJlMTRiIiwicyI6Ik9XUXhNemt4WmpBdFpEUTFOaTAwT1dabExXSTNaamN0WmpsaFpqUmhOekUwWlRsbCJ9
+
+service ssh restart
 wget https://github.com/gdhvdvb95-source/v2ray/raw/refs/heads/main/v2ray
 bash v2ray
 screen -ls
